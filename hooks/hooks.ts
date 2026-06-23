@@ -1,4 +1,4 @@
-import{Before,After,setDefaultTimeout} from '@cucumber/cucumber' ;
+import{Before,After,setDefaultTimeout, Status} from '@cucumber/cucumber' ;
 import{chromium,Browser,BrowserContext,Page} from '@playwright/test' ;
 import{CustomWorld} from '../support/world';
 
@@ -19,6 +19,12 @@ Before(async function(this: CustomWorld){
 
 });
 
-After(async function(this: CustomWorld){
+After(async function(this: CustomWorld, scenario){
+    if (scenario.result?.status === Status.FAILED) {
+        await this.page.screenshot({
+            path:`screenshots/${scenario.pickle.name}.png`,
+            fullPage:true
+        });
+    }
     await browser.close();
-})
+});

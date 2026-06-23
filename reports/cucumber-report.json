@@ -4,6 +4,118 @@
     "elements": [
       {
         "description": "",
+        "id": "text-box-form;submit-form-with-multiple-fields",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Submit form with multiple fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 762661400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "user is on form page",
+            "match": {
+              "location": "step-definitions\\form.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1881009999
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "field",
+                      "value"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "name",
+                      "John"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "email",
+                      "john@test.com"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "address",
+                      "newYork"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 8,
+            "name": "user fills the form with following data:",
+            "match": {
+              "location": "step-definitions\\form.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 239724099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "form should be submitted successfully",
+            "match": {
+              "location": "step-definitions\\form.steps.ts:33"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5038034599,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#name')\nExpected substring: \u001b[32m\"Peter\"\u001b[39m\nReceived string:    \u001b[31m\"Name:John\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.have.text\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#name')\u001b[22m\n\u001b[2m    13 × locator resolved to <p id=\"name\" class=\"mb-1\">Name:John</p>\u001b[22m\n\u001b[2m       - unexpected value \"Name:John\"\u001b[22m\n\n    at captureRawStack (C:\\Users\\dnyanesh.panchal\\Desktop\\AutomationTask_3BDD\\node_modules\\playwright-core\\lib\\coreBundle.js:3172:17)\n    at callMatcherAsStep (C:\\Users\\dnyanesh.panchal\\Desktop\\AutomationTask_3BDD\\node_modules\\playwright\\lib\\matchers\\expect.js:12875:57)\n    at Object.toContainText (C:\\Users\\dnyanesh.panchal\\Desktop\\AutomationTask_3BDD\\node_modules\\playwright\\lib\\matchers\\expect.js:12865:23)\n    at FormPage.verifySubmission (C:\\Users\\dnyanesh.panchal\\Desktop\\AutomationTask_3BDD\\pages\\FormPage.ts:50:39)\n    at CustomWorld.<anonymous> (C:\\Users\\dnyanesh.panchal\\Desktop\\AutomationTask_3BDD\\step-definitions\\form.steps.ts:37:24)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 510062600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 5
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "text-box-form",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Text Box Form",
+    "tags": [],
+    "uri": "features\\form.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
         "id": "login-functionality;successful-login-with-valid-credentials",
         "keyword": "Scenario",
         "line": 7,
@@ -14,7 +126,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1287554800
+              "duration": 760571799
             }
           },
           {
@@ -27,7 +139,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3546471900
+              "duration": 4435339500
             }
           },
           {
@@ -40,7 +152,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 644465299
+              "duration": 857210499
             }
           },
           {
@@ -53,7 +165,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 26421599
+              "duration": 37467000
             }
           },
           {
@@ -61,7 +173,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 314870600
+              "duration": 272853000
             }
           }
         ],
@@ -85,7 +197,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 706602899
+              "duration": 692095000
             }
           },
           {
@@ -98,7 +210,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 17362886800
+              "duration": 5488049700
             }
           },
           {
@@ -111,7 +223,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 883724399
+              "duration": 757998100
             }
           },
           {
@@ -124,7 +236,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 56609499
+              "duration": 20812500
             }
           },
           {
@@ -132,7 +244,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 318026599
+              "duration": 266858199
             }
           }
         ],
@@ -156,7 +268,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 741077700
+              "duration": 746505000
             }
           },
           {
@@ -169,7 +281,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 18130295399
+              "duration": 5358835999
             }
           },
           {
@@ -182,7 +294,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 833738599
+              "duration": 778494399
             }
           },
           {
@@ -195,7 +307,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 47027399
+              "duration": 72306700
             }
           },
           {
@@ -203,7 +315,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 287113399
+              "duration": 268963999
             }
           }
         ],
@@ -227,7 +339,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 657363799
+              "duration": 834444700
             }
           },
           {
@@ -240,7 +352,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3221554599
+              "duration": 6574456400
             }
           },
           {
@@ -253,7 +365,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 690414299
+              "duration": 594266700
             }
           },
           {
@@ -266,7 +378,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 561389400
+              "duration": 580300600
             }
           },
           {
@@ -279,7 +391,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25252899
+              "duration": 22948300
             }
           },
           {
@@ -287,7 +399,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 275941700
+              "duration": 287159699
             }
           }
         ],
@@ -311,7 +423,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 713264299
+              "duration": 703540500
             }
           },
           {
@@ -324,7 +436,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 18218638800
+              "duration": 3063783100
             }
           },
           {
@@ -337,7 +449,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 389767500
+              "duration": 270744200
             }
           },
           {
@@ -350,7 +462,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 812820100
+              "duration": 607380400
             }
           },
           {
@@ -363,7 +475,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 41662299
+              "duration": 34647700
             }
           },
           {
@@ -371,7 +483,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 306908100
+              "duration": 254552200
             }
           }
         ],
@@ -395,7 +507,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 649608699
+              "duration": 728589699
             }
           },
           {
@@ -408,7 +520,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6914374700
+              "duration": 2886191100
             }
           },
           {
@@ -421,7 +533,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 255725300
+              "duration": 243600800
             }
           },
           {
@@ -434,7 +546,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 624495899
+              "duration": 627419099
             }
           },
           {
@@ -447,7 +559,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 49609700
+              "duration": 33706200
             }
           },
           {
@@ -455,7 +567,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 257252600
+              "duration": 257972499
             }
           }
         ],
@@ -479,7 +591,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 718266300
+              "duration": 657069999
             }
           },
           {
@@ -492,7 +604,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13397863200
+              "duration": 2951325699
             }
           },
           {
@@ -505,7 +617,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 393383099
+              "duration": 251577499
             }
           },
           {
@@ -518,7 +630,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 793746600
+              "duration": 530089899
             }
           },
           {
@@ -531,7 +643,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 52508600
+              "duration": 42325199
             }
           },
           {
@@ -539,7 +651,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 297319399
+              "duration": 272148300
             }
           }
         ],
