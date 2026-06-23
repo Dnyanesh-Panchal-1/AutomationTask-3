@@ -36,6 +36,36 @@ Make sure the following are installed on your system:
 
 ---
 
+# Features Implemented
+
+# BDD Framework
+- Playwright + Cucumber Integration
+- Typescript Configuration
+
+# POM
+Implemented reusable page classes
+- LoginPage
+- FormPage
+
+# Login Automation & Data Driven testing using:
+- Scenario Outline
+- Examples table
+
+# DataTables
+Implemented DataTable support for form submission
+
+# Hooks
+Implemented 
+- Before Hook
+- After Hook
+
+# Reporting
+Implemented
+- JSON Report
+- HTML Report
+
+
+
 # Tasks Completed
 
 Day 1
@@ -91,6 +121,37 @@ Implemented data-driven testing using:
 Executed login validation using multiple sets of credentials.
 
 ---
+DAY 2
+-
+
+## Task 1: DataTables
+Implemented DataTable support for form submission
+
+## Task 2: Hooks Implementation
+Implemented 
+- Before Hook
+- After Hook
+
+## Task 3: Reporting
+Implemented
+- JSON Report
+- HTML Report
+
+## Task 4: Failure Simulations
+ The following failure scenarios were simulated and documented
+ - Element Not Found
+ - Incorrect Locator
+ - Assertion Failure
+ - Navigation Failure
+ - Undefined Step Failuire
+
+## Task 5: Timeout Simulations
+Simulated
+- Page Load Timeout
+- Element Timeout
+- Step Timeout
+
+
 
 # Challenges Faced
 
@@ -105,6 +166,9 @@ Executed login validation using multiple sets of credentials.
 - Resolving switch-case fall-through issue
 - Generating HTML reports
 - Managing navigation timeout issues
+- Sharing Data using CustomWorld
+- Configuring TraceViewer
+  
 ---
 
 
