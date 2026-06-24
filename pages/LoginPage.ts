@@ -10,6 +10,7 @@ export class LoginPage {
     readonly passwordInput: Locator;
     readonly loginButton: Locator;
     readonly flashMessage: Locator;
+    readonly logoutButton: Locator;
 
     constructor(page:Page){
         this.page=page;
@@ -18,10 +19,11 @@ export class LoginPage {
         this.passwordInput=page.locator(selectors.passwordInput);
         this.loginButton=page.locator(selectors.loginButton);
         this.flashMessage=page.locator(selectors.flashMessage);
+        this.logoutButton=page.getByRole('link',{name:'logout'});
     }
     async goto():Promise<void>{
         await this.page.goto(routes.login,{
-            waitUntil:'domcontentloaded'
+            waitUntil:'commit'
         });
     }
 
@@ -44,7 +46,7 @@ export class LoginPage {
     }
 
     async clickLogout():Promise<void>{
-        await this.page.getByRole("link",{name:"Logout"}).click();
+        await this.logoutButton.click();
     }
 
     async verifySuccessfulLogin():Promise<void>{
@@ -56,7 +58,7 @@ export class LoginPage {
     }
 
 
-    async verifyIvalidPassword():Promise<void>{
+    async verifyInvalidPassword():Promise<void>{
         await expect(this.flashMessage).toContainText(messages.invalidPassword);
     }
 

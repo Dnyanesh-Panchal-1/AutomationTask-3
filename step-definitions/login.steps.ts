@@ -33,7 +33,7 @@ Then(
 Then(
     'invalid password message should be displayed', async function(this:CustomWorld){
         const loginPage=new LoginPage(this.page);
-        await loginPage.verifyIvalidPassword();
+        await loginPage.verifyInvalidPassword();
     }
 )
 
@@ -71,15 +71,17 @@ Then(
             case 'success':
                 await loginPage.verifySuccessfulLogin();
                 break;
-            case 'failure':
-                const message = await this.page.locator('#flash').textContent();
-                if (message?.includes('username')){
-                    await loginPage.verifyInvalidUsername();
-                }else{
-                    await loginPage.verifyIvalidPassword();
-                }break;
+            
+            case 'invalidusername':
+                await loginPage.verifyInvalidUsername();
+                break;
+            
+            case 'invalidpassword':
+                await loginPage.verifyInvalidPassword();
+                break;
+
             default:
-                throw new Error(`Unknown result: ${result})`);
+                throw new Error(`Unknown result: ${result}`);
         }
 
     }

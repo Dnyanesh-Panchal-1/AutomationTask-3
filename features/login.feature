@@ -34,7 +34,7 @@ Scenario Outline: Login with multiple credentials
 Examples:
     | username     | password              | result   |
     | tomsmith     | SuperSecretPassword!  | success  |
-    | invalidUser  | SuperSecretPassword!  | failure  |
-    | tomsmith     | wrongPassword         | failure  |
+    | invalidUser  | SuperSecretPassword!  | invalidUsername  |
+    | tomsmith     | wrongPassword         | invalidPassword  |
     
     

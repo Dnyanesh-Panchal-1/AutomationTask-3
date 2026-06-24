@@ -16,6 +16,7 @@ When(
         this: CustomWorld,
         dataTable: DataTable
     ){
+        const formPage=new FormPage(this.page);
         const data= dataTable.rowsHash() as {
             name:string;
             email:string;
@@ -23,8 +24,8 @@ When(
         };
 
         this.formData=data;
-
-        const formPage=new FormPage(this.page);
+        
+        
         await formPage.fillForm(data);
         await formPage.submit();
     }
