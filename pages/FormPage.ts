@@ -1,9 +1,10 @@
 import {Page, Locator, expect} from '@playwright/test';
+import { BasePage } from './BasePage';
 import { routes } from '../constants/routes';
 import { selectors } from '../constants/selectors';
 
-export class FormPage{
-    readonly page: Page;
+export class FormPage extends BasePage {
+
 
     readonly fullName: Locator;
     readonly email: Locator;
@@ -15,7 +16,7 @@ export class FormPage{
 
 
     constructor(page:Page){
-        this.page = page;
+        super(page);
 
         this.fullName=page.locator(selectors.fullName);
         this.email=page.locator(selectors.email);
