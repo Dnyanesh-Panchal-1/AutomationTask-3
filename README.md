@@ -7,6 +7,8 @@ This project is developed using **Playwright**, **TypeScript** and **Cucumber (B
 **Application under test:**
 
 https://the-internet.herokuapp.com/login
+&
+https://demoqa.com/text-box
 
 ---
 
